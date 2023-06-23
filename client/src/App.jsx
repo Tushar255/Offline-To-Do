@@ -15,7 +15,7 @@ const App = () => {
     )
   }
   return (
-    <div className='app'>
+    <Box w='100%' h='100%' className='app'>
 
       <Flex w='100%'>
         <Text mx='auto' align='center' fontSize={{ base: "lg", sm: "2xl", md: "3xl" }} fontWeight={'bold'}>
@@ -28,18 +28,18 @@ const App = () => {
         </Button>
       </Flex>
 
-      <Flex w='100%' h='100%'>
-        <Flex w='100%' h='80vh' justify={'space-between'} >
-          <About />
-          <Home />
-        </Flex>
-
+      <Flex flexDir={{ base: 'column', md: 'row' }} w='100%' h='80vh' justify={'space-between'} >
+        <About />
+        <Home />
       </Flex>
-      <Text mt={5} align='center' fontSize={{ base: "sm", sm: "lg", md: "xl" }} fontWeight={'bold'}>
-        "GOOD FORTUNE IS WHAT HAPPENS WHEN OPPURTUNITY MEETS WITH PLANNING."
-      </Text>
-      <Text align='center' color='red' fontSize={{ base: "sm", sm: "md", md: "lg" }} fontWeight={'bold'}>-THOMAS EDISON</Text>
-    </div>
+
+      <Box position={'absolute'} bottom={5} width='100%'>
+        <Text mt={5} align='center' fontSize={{ base: "sm", sm: "lg", md: "xl" }} fontWeight={'bold'}>
+          "GOOD FORTUNE IS WHAT HAPPENS WHEN OPPURTUNITY MEETS WITH PLANNING."
+        </Text>
+        <Text align='center' color='red' fontSize={{ base: "sm", sm: "md", md: "lg" }} fontWeight={'bold'}>-THOMAS EDISON</Text>
+      </Box>
+    </Box>
   )
 }
 
