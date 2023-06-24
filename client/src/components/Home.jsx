@@ -76,7 +76,8 @@ const Home = () => {
                             borderRadius='md'
                             mb={3.5}
                             textDecoration={todo.completed ? 'line-through' : 'none'}
-                            bg={!todo.completed ? '#9cfe9c' : '#7f7f7f'}
+                            textColor={todo.completed ? 'white' : 'black'}
+                            bg={!todo.completed ? '#9cfe9c' : '#5c5656'}
                             onClick={() => isFinished(todo.id)}
                             cursor={'pointer'}
                         >
